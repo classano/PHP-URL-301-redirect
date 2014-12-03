@@ -13,7 +13,7 @@ $urlRedirection = array(
     Use the PHP function array_key_exists to search for the current page.
     If it's a match then tell the browser header 301 Moved Permanently and redirect to the new page.
 */
-if(array_key_exists($_SERVER['REQUEST_URI'],$url_redirection)){
+if(array_key_exists($_SERVER['REQUEST_URI'],$urlRedirection)){
     header("HTTP/1.1 301 Moved Permanently");
     header("Location: ".$urlRedirection[$_SERVER['REQUEST_URI']]);
     die();
